@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Apply tintColor to all instances of UIButtons in the app
+//        UIButton.appearance().tintColor = UIColor.magenta
+        
+        // Apply tintColor to all instances of UIButtons that are contained inside UIStackViews
+        UIButton.appearance(whenContainedInInstancesOf: [UIStackView.self]).tintColor = UIColor.magenta
+        
         return true
     }
 
